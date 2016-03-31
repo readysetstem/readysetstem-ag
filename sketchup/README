@@ -1,3 +1,16 @@
+Importing from Inkscape:
+    - Inkscape:
+        - Design must be converted to paths: Select all; Path -> Object to Path
+        - File - > Save a Copy
+            - Type DXF
+            - Deselect "use ROBOT-Master ..." if selected.
+            - Deselect "use LWPOLYLINE..." if selected.  (Important!)
+            - Base unit: in.
+    - Sketchup
+        - Import...   Select DXF
+        - Select part and explode
+        - Will likely need to edit at 1000 scale, and then scale back, for better precision.
+        - Will need to redraw lines on part to restore faces.
 Note on the Text Tool:
     - The Text Tool (Text with Arrow Leader), sometimes loses the text when the
       Leader is "View based", when the image is exported.  To fix this, Leave
@@ -10,9 +23,17 @@ Exporting sketchup images for users guide:
     - Orient Scene to Main (double click on "Main" just below toolbar)
     - Open group of interest (if there is one), and make sure Fade Rest of
       Model is set
-    - File -> Export -> 2D Graphic...   Export as JPG
+    - File -> Export -> 2D Graphic...   Export as PNG
+    - Select options, choose width of 5000 (height auto)
 Crop final image with:
-    ./crop image.jpg
+    ./crop image.png
+Special - Lid connector diagram:
+    - For both "Lid Connector.skp" and "Lid Connector Sandwich.skp":
+        - Export as PNG (with transparent background)
+        - ./crop <filename>.png 
+    - Import both images into "Lid Connector Diagram.svg"
+    - Adjust as needed
+    - Export as PNG.  Adjust DPI to optimize file size.
 
 
 
